@@ -49,6 +49,7 @@ function Settings() {
       });
 
       
+      
       if (response.data.success) {
         setMessage("Prices updated successfully!");
         // Clear message after 3 seconds
