@@ -1,11 +1,13 @@
+
 // Update App.js to include User route
+
 
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginPage from "./components/LoginPage";
 import HomePage from "./components/HomePage";
 import RegisterPage from "./components/RegisterPage";
-import Settings from "./components/Settings";
+
 import User from "./components/User"; // ✅ import User page
 
 
@@ -17,6 +19,9 @@ import SalesData from './components/Pages/SalesData';
 
 import Drivers from './components/Drivers';
 
+import Settings from "./components/Pages/Settings"; // ✅ import Settings page
+
+
 function App() {
   return (
     <Router>
@@ -24,6 +29,7 @@ function App() {
         <Route path="/" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/home" element={<HomePage />} />
+
         <Route path="/settings" element={<Settings />} />
         <Route path="/users" element={<User />} /> {/* ✅ new route */}
 
@@ -35,9 +41,14 @@ function App() {
         <Route path="/drivers" element={<Drivers />} />
 
 
+        <Route path="/settings" element={<Settings />} /> {/* ✅ new route */}
+
       </Routes>
     </Router>
   );
 }
 
+
 export default App;
+
+
